@@ -12,6 +12,7 @@ yarn-error.log*
 
 # Environment variables
 .env
+../.env.production
 backend/config/config.env
 
 # OS & Editor files
