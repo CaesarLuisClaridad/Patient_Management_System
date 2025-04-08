@@ -37,8 +37,10 @@ app.use(cookieParser());
 
 
 app.use(cors({
-  origin: "https://pms-sblc.onrender.com", // 🔒 Specific origin
-  credentials: true, // 🟢 THIS IS CRUCIAL
+  origin: process.env.NODE_ENV === "PRODUCTION" 
+    ? "https://pms-sblc.onrender.com"  // Production URL
+    : "http://localhost:3000",    // Development URL
+  credentials: true, // Allow cookies to be sent with requests
 }));
 
 
