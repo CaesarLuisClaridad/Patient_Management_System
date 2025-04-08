@@ -82,9 +82,9 @@ const Login = () => {
             >
               {isLoading ? "Login..." : "Login"}
             </button>
-            <Link to="/register">
+            {/* <Link to="/register">
               <p>Register</p>
-            </Link>
+            </Link> */}
           </form>
         </div>
       </div>
