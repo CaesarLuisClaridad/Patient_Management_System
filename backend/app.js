@@ -35,9 +35,12 @@ connectDataBase();
 app.use(express.json());
 app.use(cookieParser());
 
+
 app.use(cors({
-  origin: "*", 
+  origin: "https://pms-sblc.onrender.com", // 🔒 Specific origin
+  credentials: true, // 🟢 THIS IS CRUCIAL
 }));
+
 
 // Add CORS headers globally (custom)
 app.use((req, res, next) => {
