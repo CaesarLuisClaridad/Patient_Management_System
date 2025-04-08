@@ -3,7 +3,7 @@ import { setIsAuthenticated, setUser, setLoading } from "../features/userSlice";
 
 export const userApi = createApi({
   reducerPath: "userApi",
-  baseQuery: fetchBaseQuery({ baseUrl: "/api/v1" }),
+  baseQuery: fetchBaseQuery({  baseUrl: import.meta.url.REACT_APP_API_URL || "/api/v1" }),
   tagTypes: ["User"],
   endpoints: (builder) => ({
     getUser: builder.query({
