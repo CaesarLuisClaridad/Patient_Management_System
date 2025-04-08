@@ -4,7 +4,7 @@ import { logout } from "../features/userSlice";
 
 export const authApi = createApi({
   reducerPath: "authApi",
-  baseQuery: fetchBaseQuery({ baseUrl: import.meta.url.REACT_APP_API_URL || "/api/v1" }),
+  baseQuery: fetchBaseQuery({"/api/v1" }),
   keepUnusedDataFor: 30,
   endpoints: (builder) => ({
     login: builder.mutation({
