@@ -4,7 +4,7 @@ import { logout } from "../features/userSlice";
 
 export const authApi = createApi({
   reducerPath: "authApi",
-  baseQuery: fetchBaseQuery({ baseUrl: "/api/v1",  credentials: 'include', }),
+  baseQuery: fetchBaseQuery({ baseUrl: "https://pms-sblc.onrender.com/api/v1",  credentials: 'include', }),
   keepUnusedDataFor: 30,
   endpoints: (builder) => ({
     login: builder.mutation({
