@@ -11,9 +11,12 @@ yarn-debug.log*
 yarn-error.log*
 
 # Environment variables
+# Ignore environment variables
 .env
 .env.production
-backend/config/config.env
+backend/.env.production
+frontend/.env.production
+
 
 # OS & Editor files
 .DS_Store
