@@ -4,7 +4,7 @@ import { logout } from "../features/userSlice";
 
 export const authApi = createApi({
   reducerPath: "authApi",
-  baseQuery: fetchBaseQuery({ baseUrl: import.meta.env.VITE_REACT_APP_API_URL || "/api/v1", credentials: "include" }),
+  baseQuery: fetchBaseQuery({ "/api/v1"}),
   keepUnusedDataFor: 30,
   endpoints: (builder) => ({
     login: builder.mutation({
