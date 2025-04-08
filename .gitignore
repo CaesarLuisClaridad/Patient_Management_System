@@ -19,9 +19,4 @@ Thumbs.db
 .vscode/
 .idea/
 
-*.cache
-frontend/.vite/
 
-
-
-frontend/public/.DS_Store
