@@ -13,9 +13,9 @@ yarn-error.log*
 # Environment variables
 # Ignore environment variables
 .env
+.env.local
+.env.*.local
 .env.production
-backend/.env.production
-frontend/.env.production
 
 
 # OS & Editor files
