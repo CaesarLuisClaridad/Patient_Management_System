@@ -21,7 +21,6 @@ Thumbs.db
 .idea/
 
 # Build output (frontend)
-# frontend/dist/
 
 # Cache
 *.cache
