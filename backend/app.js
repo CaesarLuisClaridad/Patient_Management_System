@@ -36,10 +36,10 @@ app.use(express.json());
 app.use(cookieParser());
 
 
-// app.use(cors({
-//   origin: "https://pms-sblc.onrender.com", // 🔒 Specific origin
-//   credentials: true, // 🟢 THIS IS CRUCIAL
-// }));
+app.use(cors({
+  origin: "https://pms-sblc.onrender.com", // 🔒 Specific origin
+  credentials: true, // 🟢 THIS IS CRUCIAL
+}));
 
 
 // // Add CORS headers globally (custom)
