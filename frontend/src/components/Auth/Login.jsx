@@ -28,10 +28,11 @@ const Login = () => {
     e.preventDefault();
 
     const Userdata = {
-      name, // Use 'name' instead of 'username'
+      username: name,
       password,
     };
 
+    console.log(Userdata); 
     login(Userdata);
   };
 
