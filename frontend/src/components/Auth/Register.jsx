@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from "react";
 import logo from "../../assets/sticker.png";
-import { useLoginMutation } from "../../../redux/api/authAPI";
+import { useRegisterMutation } from "../../../redux/api/authAPI";
 import toast from "react-hot-toast";
 import MetaData from "../MetaData";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 
-const Login = () => {
+const Register = () => {
   // State for form fields
   const [name, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const [login, { isLoading, isSuccess, data, error }] = useLoginMutation();
+  const [register, { isLoading, isSuccess, error }] = useRegisterMutation();
 
-  console.log(data);
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     if (error) {
@@ -20,9 +20,10 @@ const Login = () => {
     }
 
     if (isSuccess) {
-      toast.success("Login Successfully");
+      toast.success("Registration Successful");
+      navigate("/login"); 
     }
-  }, [error, isSuccess]);
+  }, [error, isSuccess, navigate]); 
 
   // Handle form submission
   const handleSubmit = (e) => {
@@ -33,13 +34,12 @@ const Login = () => {
       password,
     };
 
-    console.log(Userdata); 
-    login(Userdata);
+    register(Userdata);
   };
 
   return (
     <>
-      <MetaData title={"Login"} />
+      <MetaData title={"Register"} />
       <div className="box">
         <div
           className="wrapper p-4 p-md-5 rounded-3 w-100"
@@ -80,11 +80,8 @@ const Login = () => {
               className="btn btn-outline-light rounded-5"
               disabled={isLoading}
             >
-              {isLoading ? "Login..." : "Login"}
+              {isLoading ? "Registering..." : "Register"}
             </button>
-            <Link to="/register">
-              <p>Register</p>
-            </Link>
           </form>
         </div>
       </div>
@@ -92,4 +89,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;

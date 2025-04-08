@@ -7,6 +7,15 @@ export const authApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: "/api/v1",  credentials: 'include', }),
   keepUnusedDataFor: 30,
   endpoints: (builder) => ({
+    register: builder.mutation({
+      query(body) {
+        return {
+          url: "/register",
+          method: "POST",
+          body,
+        };
+      },
+    }),
     login: builder.mutation({
       query(body) {
         return {
@@ -28,8 +37,7 @@ export const authApi = createApi({
       query: () => "/logout",
       async onQueryStarted(args, { dispatch, queryFulfilled }) {
         try {
-          await queryFulfilled; // Wait for the logout request to complete
-          // Dispatch the logout action to clear Redux state and localStorage
+          await queryFulfilled;
           dispatch(logout());
           window.location.reload(); 
         } catch (error) {
@@ -40,4 +48,4 @@ export const authApi = createApi({
   }),
 });
 
-export const { useLoginMutation, useLogoutMutation } = authApi;
+export const { useLoginMutation, useLogoutMutation, useRegisterMutation } = authApi;

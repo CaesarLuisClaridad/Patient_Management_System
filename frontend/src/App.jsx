@@ -12,6 +12,7 @@ import { Toaster } from "react-hot-toast";
 import Update_Data from "./components/Update_Data";
 import Login from "./components/Auth/Login";
 import { useSelector } from "react-redux";
+import Register from "./components/Auth/Register";
 
 function App() {
   const { isAuthenticated, loading } = useSelector((state) => state.auth);
@@ -23,6 +24,7 @@ function App() {
         {!isAuthenticated && (
           <Routes>
             <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register/>}/>
             <Route path="*" element={<Navigate to="/login" />} />
           </Routes>
         )}

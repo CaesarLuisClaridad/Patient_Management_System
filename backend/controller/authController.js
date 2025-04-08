@@ -7,6 +7,10 @@ import sendToken from "../utils/sendToken.js";
 export const registerUser = catchAsyncError(async (req, res, next) => {
   const { name, password } = req.body;
 
+  if (!name || !password) {
+    return next(new ErrorHandler("Please enter name and password", 401));
+  }
+
   const user = await User.create({ name, password });
 
   const token = user.getJwtToken();
