@@ -1,10 +1,19 @@
 # 🏥 Patient Management System
 
-**Patient Management System** is a web-based application built using the **MERN** stack (MongoDB, Express.js, React.js, Node.js) and styled with **Bootstrap** for a clean, responsive, and user-friendly interface.
 
-This system allows healthcare staff to easily manage patient records — including creating, updating, deleting, and searching for data — all within a modern and intuitive UI.
+**Patient Management System** is a web application built using the **MERN** stack (MongoDB, Express.js, React.js, Node.js) and styled with **Bootstrap**. It features a clean, responsive, and user-friendly interface.
 
----
+##
+- Built with the **MERN stack** for full-stack functionality
+- Clean and **responsive UI** using **Bootstrap**
+- Easy-to-use interface for healthcare staff
+
+## What You Can Do
+- **Add** new patient records  
+- **Update** patient information  
+- **Delete** existing records  
+- **Search** for patients by name or other details  
+- **View** complete patient details in a dedicated view
 
 ## ✅ Features
 
@@ -31,5 +40,6 @@ This system allows healthcare staff to easily manage patient records — includi
 ## 🧪 Demo Credentials
 
 To sign in:
-Username: sblcNurse
-Password: sblc2025!
+
+**Username:** `sblcNurse`  
+**Password:** `sblc2025!`
